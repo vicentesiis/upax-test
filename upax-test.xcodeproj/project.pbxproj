@@ -11,6 +11,7 @@
 		FE179B222738A4D6003C1188 /* FirebaseImageStorageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE179B212738A4D6003C1188 /* FirebaseImageStorageHandler.swift */; };
 		FE179B242738B2AB003C1188 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE179B232738B2AB003C1188 /* User.swift */; };
 		FE179B262738B96A003C1188 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE179B252738B96A003C1188 /* Extensions.swift */; };
+		FE179B492738EAFB003C1188 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE179B482738EAFB003C1188 /* MainViewModel.swift */; };
 		FE285E5527372872004573FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE285E5427372872004573FE /* AppDelegate.swift */; };
 		FE285E5727372872004573FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE285E5627372872004573FE /* SceneDelegate.swift */; };
 		FE285E5927372872004573FE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE285E5827372872004573FE /* MainViewController.swift */; };
@@ -39,7 +40,6 @@
 		FE36619D27379AC300314FA4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FE36619C27379AC300314FA4 /* Alamofire */; };
 		FE3661A627379D0300314FA4 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3661A527379D0300314FA4 /* Question.swift */; };
 		FE3661A92737A27100314FA4 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = FE3661A82737A27100314FA4 /* Charts */; };
-		FE3661AB2737A5A100314FA4 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3661AA2737A5A100314FA4 /* MainViewModel.swift */; };
 		FE3661AD2737A87400314FA4 /* MainProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3661AC2737A87400314FA4 /* MainProtocol.swift */; };
 		FE3661AF2737A9CF00314FA4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3661AE2737A9CF00314FA4 /* Constants.swift */; };
 		FE3661B12737B5E300314FA4 /* ChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3661B02737B5E300314FA4 /* ChartViewModel.swift */; };
@@ -59,6 +59,7 @@
 		FE179B232738B2AB003C1188 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FE179B252738B96A003C1188 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		FE179B272738C7E2003C1188 /* Questions Test.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Questions Test.md"; sourceTree = "<group>"; };
+		FE179B482738EAFB003C1188 /* MainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		FE285E5127372872004573FE /* upax-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "upax-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE285E5427372872004573FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE285E5627372872004573FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,7 +88,6 @@
 		FE36618C273787B300314FA4 /* ChartCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartCoordinator.swift; sourceTree = "<group>"; };
 		FE3661942737989C00314FA4 /* RestAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAPI.swift; sourceTree = "<group>"; };
 		FE3661A527379D0300314FA4 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
-		FE3661AA2737A5A100314FA4 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = SOURCE_ROOT; };
 		FE3661AC2737A87400314FA4 /* MainProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProtocol.swift; sourceTree = "<group>"; };
 		FE3661AE2737A9CF00314FA4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FE3661B02737B5E300314FA4 /* ChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewModel.swift; sourceTree = "<group>"; };
@@ -161,8 +161,8 @@
 		FE285E6D273730E8004573FE /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				FE3661852737873400314FA4 /* Chart */,
 				FE36617E2737721F00314FA4 /* Main */,
+				FE3661852737873400314FA4 /* Chart */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -240,7 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				FE3661AC2737A87400314FA4 /* MainProtocol.swift */,
-				FE3661AA2737A5A100314FA4 /* MainViewModel.swift */,
+				FE179B482738EAFB003C1188 /* MainViewModel.swift */,
 				FE285E5827372872004573FE /* MainViewController.swift */,
 				FE285E5A27372872004573FE /* Main.storyboard */,
 				FE3661772737595100314FA4 /* PreviewSelfieViewController */,
@@ -385,6 +385,7 @@
 				FE366182273773C500314FA4 /* Storyboard+Utils.swift in Sources */,
 				FE285E7127373298004573FE /* NameTableViewCell.swift in Sources */,
 				FE285E76273734F3004573FE /* UITableView+GenericDequeueReusableCell.swift in Sources */,
+				FE179B492738EAFB003C1188 /* MainViewModel.swift in Sources */,
 				FE285E6A2737308D004573FE /* NibLoadableView.swift in Sources */,
 				FE36617A273759B900314FA4 /* PreviewSelfieViewController.swift in Sources */,
 				FE285E6C27373098004573FE /* ReusableView.swift in Sources */,
@@ -406,7 +407,6 @@
 				FE179B202738A4CC003C1188 /* FirestoreHandler.swift in Sources */,
 				FE285E5727372872004573FE /* SceneDelegate.swift in Sources */,
 				FE179B262738B96A003C1188 /* Extensions.swift in Sources */,
-				FE3661AB2737A5A100314FA4 /* MainViewModel.swift in Sources */,
 				FE285E81273737C8004573FE /* DescriptionChartTableViewCell.swift in Sources */,
 				FE3661802737727F00314FA4 /* PreviewSelfieCoordinator.swift in Sources */,
 				FE3661882737875F00314FA4 /* ChartViewController.swift in Sources */,
